@@ -24,7 +24,7 @@ $ gulp
 $ gulp watch (default task)
 ```
 
-Watches for changes to scss, js and nunjucks (njk) files. Compiles and reloads browser on save.
+Watches for changes to scss, js and nunjucks (njk) files. Compiles on save.
 
 ```
 $ gulp styles
