@@ -1,0 +1,15 @@
+.icon {
+  padding: 8px;
+  border-radius: 8px;
+  &.is-yellow {
+    color: $yellow;
+  }
+  
+  &.is-green {
+    color: $green;
+  }
+  
+  &.is-purple {
+    color: $purple;
+  }
+}

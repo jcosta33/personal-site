@@ -1,0 +1,46 @@
+
+/*
+  Helpers
+*/
+.width--75{
+  width:75%!important;
+}
+
+.margin--none{
+  margin:0!important;
+}
+.margin-b--5{
+  margin-bottom:5px!important;
+}
+.margin-t--40{
+  margin-top:40px!important;
+}
+
+.has-text-green{
+  color:$green!important;
+}
+
+.background--red{
+  background:$danger!important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p{
+    color:$white;
+  }
+  p{
+    opacity:.6;
+  }
+}
+
+.is-pulled-right{
+  float:right!important;
+}
+
+.has-background-primary {
+  background-color: $primary!important;
+}
+

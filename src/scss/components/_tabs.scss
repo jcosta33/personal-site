@@ -1,5 +1,3 @@
-@import 'variables.scss';
-
 .tabs{
   display: flex;
   list-style: none;
@@ -9,14 +7,14 @@
 .tabs .tab{
   padding:16px;
   width:50%;
-  border-left:1px solid #bbb;
-  border-right:1px solid #bbb;
-  border-top:1px solid #bbb;
-  background:#e1e1e1;
+  border-left:1px solid $grey-light;
+  border-right:1px solid $grey-light;
+  border-top:1px solid $grey-light;
+  background:$grey-lightest;
 }
 
 .tabs .tab:not(.is-active){
-  border-bottom:1px solid #bbb;
+  border-bottom:1px solid $grey-light;
 }
 
 .tabs .tab.is-active{
@@ -25,9 +23,9 @@
 
 .tab-content{
   padding: 16px;
-  border-left:1px solid #bbb;
-  border-right:1px solid #bbb;
-  border-bottom:1px solid #bbb;
+  border-left:1px solid $grey-light;
+  border-right:1px solid $grey-light;
+  border-bottom:1px solid $grey-light;
 }
 
 .tab-content .row{

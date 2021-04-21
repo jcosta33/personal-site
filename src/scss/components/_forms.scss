@@ -1,14 +1,11 @@
-@import 'variables.scss';
-@import 'mixins.scss';
-
-$input-bg:#f1f1f1;
+$input-bg:$white-ter;
 
 .field{
   &:not(:last-child){
     margin-bottom:32px;
   }
   &:hover .icon{
-    color:#000;
+    color:$black;
     display: block;
   }
   input,
@@ -20,7 +17,7 @@ $input-bg:#f1f1f1;
     position: absolute;
     line-height: 42px;
     padding: 0 10px;
-    color:#999;
+    color:$grey;
      ~  .input{
       padding-left: 32px;
     }
@@ -61,7 +58,7 @@ $input-bg:#f1f1f1;
   }
 
   &.is-dark{
-    color:#fff;
+    color:$white;
     background:#333;
     border:1px solid #333;
   }

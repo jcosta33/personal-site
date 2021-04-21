@@ -1,9 +1,7 @@
-@import 'variables.scss';
-
 .row {
   display:flex;
   justify-content: space-between;
-  margin: -16px;
+  margin: -16px 0;
   &.is-multiline{
     flex-wrap: wrap;
     .column{

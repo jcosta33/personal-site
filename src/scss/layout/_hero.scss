@@ -1,0 +1,12 @@
+.hero {
+  padding: 64px  32px;
+  margin:0;
+  clear: both;
+  background:$black;
+  .title{
+    color:$white;
+  }
+  .subtitle{
+    color: $grey-lightest;
+  }
+}
