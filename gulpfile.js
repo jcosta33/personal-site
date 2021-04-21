@@ -14,7 +14,7 @@ const PATHS = {
 const plugins = require("gulp-load-plugins")({
     pattern: "*"
   });
-  
+
 
 // writing up the gulp nunjucks task
 gulp.task('nunjucks', function() {
@@ -89,7 +89,7 @@ gulp.task('minify', function() {
 // Merge and minify files
 gulp.task("concat-styles", () =>
   gulp
-    .src(["./src/css/index.css", "./src/css/vendor/**/*.css"])
+    .src(["./src/css/index.css"])
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.concat("styles.css"))
     .pipe(plugins.minifyCss())
@@ -123,23 +123,44 @@ gulp.task("concat-js", () =>
     .pipe(gulp.dest("./dist/"))
 );
 
+gulp.task("compress-images", () =>{
+  gulp.src('src/images/*').pipe(imagemin([
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.svgo({
+        plugins: [
+            {removeViewBox: true},
+            {cleanupIDs: false}
+        ]
+    })
+  ]));
+});
+
+gulp.task("move-images", () =>{
+  gulp.src(['src/images/**/*']).pipe(gulp.dest('dist/images'));
+});
+gulp.task("move-fonts", () =>{
+  gulp.src(['src/fonts/**/*']).pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task("watch", () => {
+  // Watch sass files
+  gulp.watch("src/scss/**/*.scss", gulp.series("styles","concat-styles"));
+  // Watch js files
+  gulp.watch("src/js/**/*.js", gulp.series("scripts"));
+
+  // Watch njk files
+  gulp.watch(
+    ["src/pages/**/*.+(html|njk)", "src/templates/**/*.+(html|njk)"],
+    gulp.series("nunjucks")
+  );
+})
 
 // Gulp tasks
-gulp.task("watch", gulp.series("browser-sync"), () => {
-    // Watch sass files
-    gulp.watch("./src/scss/**/*.scss", ["styles", reload]);
-  
-    // Watch js files
-    gulp.watch("./src/js/**/*.js", ["scripts", reload]);
-  
-    // Watch njk files
-    gulp.watch(
-      ["./src/pages/**/*.+(html|njk)", "./src/templates/**/*.+(html|njk)"],
-      ["njk", reload]
-    );
-  });
+gulp.task("serve",  gulp.parallel("browser-sync", "watch") );
 
   gulp.task("default",  gulp.series("watch")); // Default gulp task
   gulp.task("lint", gulp.series("lint-styles", "lint-scripts")); // Lint css + js files
   gulp.task("merge", gulp.series("concat-styles", "concat-js")); // Merge & minify css + js
-  gulp.task("build", gulp.series("nunjucks", "styles", "merge")); // Compile sass, concat and minify css + js
+  gulp.task("build", gulp.series("nunjucks", "styles", "merge", "move-images", "move-fonts")); // Compile sass, concat and minify css + js
