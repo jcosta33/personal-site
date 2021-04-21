@@ -1,0 +1,28 @@
+.social-list{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin:0;
+  li{
+    padding: 0;
+    margin:0;
+
+    .icon{
+      padding:16px;
+      color:#fff;
+      
+      &__linkedin{
+       background:#0e76a8; 
+      }
+      &__facebook{
+       background:#4267B2; 
+      }
+      &__instagram{
+       background:#8a3ab9; 
+      }
+      &__twitter{
+       background:#1DA1F2; 
+      }
+    }
+  }
+}

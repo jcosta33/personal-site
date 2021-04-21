@@ -140,6 +140,7 @@ gulp.task("compress-images", () =>{
 gulp.task("move-images", () =>{
   gulp.src(['src/images/**/*']).pipe(gulp.dest('dist/images'));
 });
+
 gulp.task("move-fonts", () =>{
   gulp.src(['src/fonts/**/*']).pipe(gulp.dest('dist/fonts'));
 });
@@ -159,8 +160,7 @@ gulp.task("watch", () => {
 
 // Gulp tasks
 gulp.task("serve",  gulp.parallel("browser-sync", "watch") );
-
-  gulp.task("default",  gulp.series("watch")); // Default gulp task
-  gulp.task("lint", gulp.series("lint-styles", "lint-scripts")); // Lint css + js files
-  gulp.task("merge", gulp.series("concat-styles", "concat-js")); // Merge & minify css + js
-  gulp.task("build", gulp.series("nunjucks", "styles", "merge", "move-images", "move-fonts")); // Compile sass, concat and minify css + js
+gulp.task("default",  gulp.series("watch")); // Default gulp task
+gulp.task("lint", gulp.series("lint-styles", "lint-scripts")); // Lint css + js files
+gulp.task("merge", gulp.series("concat-styles", "concat-js")); // Merge & minify css + js
+gulp.task("build", gulp.series("nunjucks", "styles", "merge", "move-images", "move-fonts")); // Compile sass, concat and minify css + js
