@@ -359,7 +359,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  min-height: 100vh; }
+  min-height: 100vh;
+  letter-spacing: .05rem; }
+
+main .section:first-child {
+  margin-top: 3rem; }
+
+a {
+  text-decoration: none; }
 
 .app {
   flex-grow: 1; }
@@ -526,6 +533,7 @@ body.sidebar-open {
     justify-content: space-between; }
 
 .button {
+  display: inline-block;
   color: white;
   background-color: #3E5460;
   text-decoration: none;
@@ -650,21 +658,17 @@ body.sidebar-open {
   background: #F5F7FA;
   min-width: 100px;
   width: 100%;
-  border-color: #ccc; }
+  border-color: #CAD0D9; }
   .input:hover, .select:hover {
-    border: 1px solid #555; }
+    border: 1px solid #575e67; }
   .input:focus, .select:focus {
     border: 1px solid #FF7A5C; }
-  .input.is-dark, .select.is-dark {
-    color: white;
-    background: #333;
-    border: 1px solid #333; }
   .input ~ .message, .select ~ .message {
     margin-top: 6px;
     font-size: 12px;
-    color: #777; }
+    color: #757d88; }
     .input ~ .message.is-danger, .select ~ .message.is-danger {
-      color: #f44336; }
+      color: #F4253B; }
     .input ~ .message.is-info, .select ~ .message.is-info {
       color: #FF7A5C; }
 
@@ -673,11 +677,11 @@ body.sidebar-open {
   min-height: 80px;
   padding: 8px;
   background: none;
-  border: 1px solid #555;
+  border: 1px solid #575e67;
   border-radius: 8px;
   outline: 0 !important; }
   .textarea:hover {
-    border: 1px solid #000; }
+    border: 1px solid #00071D; }
   .textarea:focus {
     border: 1px solid #FF7A5C; }
 
@@ -691,7 +695,7 @@ body.sidebar-open {
 .row {
   display: flex;
   justify-content: space-between;
-  margin: -16px 0; }
+  margin: -1rem; }
   .row.is-multiline {
     flex-wrap: wrap; }
     .row.is-multiline .column {
@@ -727,7 +731,7 @@ body.sidebar-open {
       width: 100%; }
 
 .hero {
-  padding: 64px  32px;
+  padding: 4rem  1rem;
   margin: 0;
   clear: both;
   background: #00071D; }
@@ -737,24 +741,46 @@ body.sidebar-open {
     color: #E5E8ED; }
 
 .section {
-  padding: 32px 16px; }
+  padding: 2rem 1rem; }
 
 .container {
   max-width: 1100px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 1rem; }
   .container.is-small {
-    max-width: 600px;
-    margin: 0 auto; }
+    max-width: 600px; }
+  .container.is-large {
+    max-width: 1200px; }
+  .container.is-fluid {
+    max-width: 100%; }
 
 .icon {
+  display: inline-block;
   padding: 8px;
   border-radius: 8px; }
-  .icon.is-yellow {
-    color: #FBBB24; }
+  .icon i {
+    display: block; }
+  .icon.is-hoverable {
+    cursor: pointer;
+    transition: .2s ease; }
   .icon.is-green {
-    color: #00C092; }
-  .icon.is-purple {
-    color: #7854F7; }
+    color: #00C092;
+    background: #E2F1F2; }
+    .icon.is-green.is-hoverable:hover {
+      background: #00C092;
+      color: #E2F1F2; }
+  .icon.is-red {
+    color: #F4253B;
+    background: #F6E2E3; }
+    .icon.is-red.is-hoverable:hover {
+      background: #F4253B;
+      color: #F6E2E3; }
+  .icon.is-blue {
+    color: #3297c2;
+    background: #EDF1E9; }
+    .icon.is-blue.is-hoverable:hover {
+      background: #3297c2;
+      color: #EDF1E9; }
 
 .image {
   margin: 0; }
@@ -771,11 +797,13 @@ body.sidebar-open {
 
 .lead {
   font-size: 18px;
-  margin-bottom: 10px; }
+  margin-bottom: 1rem;
+  margin-top: 0; }
 
 .text {
   color: #3E5460;
-  margin-bottom: 10px; }
+  margin-bottom: 1rem;
+  margin-top: 0; }
   .text.is-primary {
     color: #FF7A5C; }
   .text.is-grey {
@@ -794,7 +822,8 @@ body.sidebar-open {
 .title {
   margin: 0 0 16px;
   font-weight: 400;
-  font-family: "Karla", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system; }
+  font-family: "Karla", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system;
+  letter-spacing: -.05rem; }
   .title.is-1 {
     font-size: 3rem;
     font-weight: 800; }
@@ -1045,7 +1074,7 @@ body.sidebar-open {
   font-size: 2em; }
 
 .fa-inverse {
-  color: white; }
+  color: #fff; }
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
@@ -5491,6 +5520,96 @@ readers do not read off random characters that represent icons */
   font-weight: 500;
   font-style: normal;
   font-display: swap; }
+
+/*
+  Helpers
+*/
+.is-pulled-right {
+  float: right !important; }
+
+.is-pulled-left {
+  float: left !important; }
+
+.max_width--25r {
+  width: 25rem !important; }
+
+.width--75 {
+  width: 75% !important; }
+
+.margin--none {
+  margin: 0 !important; }
+
+.margin-b--2 {
+  margin-bottom: 3rem !important; }
+
+.margin-t--40 {
+  margin-top: 40px !important; }
+
+.has-text-center {
+  text-align: center; }
+
+.has-text-uppercase {
+  text-transform: uppercase !important; }
+
+.has-text-grey {
+  color: #757d88 !important; }
+
+.has-text-green {
+  color: #00C092 !important; }
+
+.has-text-white, .person-name {
+  color: white !important; }
+
+.has-text-size-1 {
+  font-size: 3rem !important; }
+
+.has-text-size-2 {
+  font-size: 2.5rem !important; }
+
+.has-text-size-3 {
+  font-size: 2rem !important; }
+
+.has-text-size-4 {
+  font-size: 1.5rem !important; }
+
+.has-text-size-5, .person-name {
+  font-size: 1.25rem !important; }
+
+.has-padding-xs {
+  padding: 0.5rem !important; }
+
+.has-margin-b {
+  margin-bottom: 1.5rem !important; }
+
+.has-h-padding-xs, .person-name {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important; }
+
+.has-v-padding-sm {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important; }
+
+.has-h-m-xs {
+  margin: 0 0.5rem !important; }
+
+.background--red {
+  background: #F4253B !important; }
+  .background--red h1,
+  .background--red h2,
+  .background--red h3,
+  .background--red h4,
+  .background--red h5,
+  .background--red h6,
+  .background--red p {
+    color: white; }
+  .background--red p {
+    opacity: .6; }
+
+.is-pulled-right {
+  float: right !important; }
+
+.has-background-primary {
+  background-color: #FF7A5C !important; }
 
 .footer {
   background: #00071D;

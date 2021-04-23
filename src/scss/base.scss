@@ -9,6 +9,17 @@ body {
   flex-direction: column;
   align-items: stretch;
   min-height: 100vh;
+  letter-spacing: .05rem;
+}
+
+main{
+  .section:first-child{
+    margin-top:3rem;
+  }
+}
+
+a{
+  text-decoration: none;
 }
 
 .app{

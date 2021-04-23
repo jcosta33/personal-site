@@ -2,6 +2,19 @@
 /*
   Helpers
 */
+
+.is-pulled-right{
+  float:right!important;
+}
+
+.is-pulled-left{
+  float:left!important;
+}
+
+.max_width--25r{
+  width:25rem!important;
+}
+
 .width--75{
   width:75%!important;
 }
@@ -9,15 +22,67 @@
 .margin--none{
   margin:0!important;
 }
-.margin-b--5{
-  margin-bottom:5px!important;
+.margin-b--2{
+  margin-bottom:3rem!important;
 }
+
 .margin-t--40{
   margin-top:40px!important;
 }
-
+.has-text-center{
+  text-align: center;
+}
+.has-text-uppercase{
+  text-transform: uppercase!important;
+}
+.has-text-grey{
+  color:$grey!important;
+}
 .has-text-green{
   color:$green!important;
+}
+
+.has-text-white{
+  color:$white!important;
+}
+
+.has-text-size-1{
+  font-size:$size-1!important;
+}
+.has-text-size-2{
+  font-size:$size-2!important;
+}
+.has-text-size-3{
+  font-size:$size-3!important;
+}
+.has-text-size-4{
+  font-size:$size-4!important;
+}
+
+.has-text-size-5{
+  font-size:$size-5!important;
+}
+
+.has-padding-xs{
+  padding: $block-spacing-xs!important;
+}
+
+.has-margin-b{
+  margin-bottom: $block-spacing!important;
+}
+
+.has-h-padding-xs{
+  padding-left:$block-spacing-xs!important;
+  padding-right:$block-spacing-xs!important;
+}
+
+.has-v-padding-sm{
+  padding-top: $block-spacing-sm!important;
+  padding-bottom: $block-spacing-sm!important;
+}
+
+.has-h-m-xs{
+  margin: 0 $block-spacing-xs!important;
 }
 
 .background--red{

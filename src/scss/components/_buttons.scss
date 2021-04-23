@@ -16,6 +16,7 @@ $button-text-color:$white;
 
 
 .button{
+  display: inline-block;
   &:not(.is-small){
     @extend %control;
   }

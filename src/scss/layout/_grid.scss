@@ -1,7 +1,7 @@
 .row {
   display:flex;
   justify-content: space-between;
-  margin: -16px 0;
+  margin: -1rem;
   &.is-multiline{
     flex-wrap: wrap;
     .column{

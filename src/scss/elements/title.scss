@@ -2,6 +2,8 @@
   margin: 0 0 16px;
   font-weight: $weight-normal;
   font-family: $family-sans-serif;
+  letter-spacing: -.05rem;
+
   &.is-1 {
     font-size: $size-1;
     font-weight:800;

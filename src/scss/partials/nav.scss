@@ -83,3 +83,9 @@
 
   color:$white;
 }
+
+.person-name{
+  @extend .has-h-padding-xs;
+  @extend .has-text-white;
+  @extend .has-text-size-5;
+}

@@ -1,8 +1,14 @@
 .container {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 1rem;
   &.is-small{
     max-width: 600px;
-    margin: 0 auto;
+  }
+  &.is-large{
+    max-width: 1200px;
+  }
+  &.is-fluid{
+    max-width: 100%;
   }
 }
