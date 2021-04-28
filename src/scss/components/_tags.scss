@@ -19,4 +19,8 @@
     background-color: $warning;
     color:#000;
   }
+  &.is-black {
+    background-color: $black;
+    color: $white;
+  }
 }

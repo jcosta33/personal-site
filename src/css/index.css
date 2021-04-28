@@ -354,13 +354,12 @@ template {
 body {
   margin: 0;
   background: #f1f1f1;
-  font-family: "Spectral", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system;
+  font-family: "Roboto", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system;
   font-size: 16px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  min-height: 100vh;
-  letter-spacing: .05rem; }
+  min-height: 100vh; }
 
 main .section:first-child {
   margin-top: 3rem; }
@@ -692,28 +691,52 @@ body.sidebar-open {
   .control input {
     display: inline-block; }
 
+.tags {
+  display: flex; }
+
+.tag {
+  padding: 8px;
+  border-radius: 8px;
+  height: 35px;
+  font-weight: 600; }
+  .tag.is-primary {
+    background-color: #FF7A5C;
+    color: #fff; }
+  .tag.is-aqualight {
+    color: #00C092;
+    background: #C9F7F4; }
+  .tag.is-yellow {
+    background-color: #FBBB24;
+    color: #000; }
+  .tag.is-black {
+    background-color: #00071D;
+    color: white; }
+
 .row {
   display: flex;
   justify-content: space-between;
   margin: -1rem; }
   .row.is-multiline {
     flex-wrap: wrap; }
-    .row.is-multiline .column {
-      padding: 8px; }
   .row.is-small {
-    margin-left: -8px;
-    margin-right: -8px; }
-    .row.is-small .column {
-      padding: 8px; }
+    margin-left: -.5rem;
+    margin-right: -.5rem; }
+    .row.is-small > .column {
+      padding: .5rem; }
   .row.is-large {
-    margin-left: -24px;
-    margin-right: -24px; }
-    .row.is-large .column {
-      padding: 24px; }
+    margin-left: -1.5rem;
+    margin-right: -1.5rem; }
+    .row.is-large > .column {
+      padding: 1.5rem; }
+  .row.is-xl {
+    margin-left: -3rem;
+    margin-right: -3rem; }
+    .row.is-xl > .column {
+      padding: 3rem; }
   .row .column {
     vertical-align: top;
     box-sizing: border-box;
-    padding: 16px;
+    padding: 1rem;
     width: 100%; }
     .row .column.is-3 {
       width: 25%; }
@@ -748,7 +771,7 @@ body.sidebar-open {
   margin: 0 auto;
   padding: 1rem; }
   .container.is-small {
-    max-width: 600px; }
+    max-width: 800px; }
   .container.is-large {
     max-width: 1200px; }
   .container.is-fluid {
@@ -824,6 +847,8 @@ body.sidebar-open {
   font-weight: 400;
   font-family: "Karla", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system;
   letter-spacing: -.05rem; }
+  .title + .subtitle {
+    margin-top: -.5rem; }
   .title.is-1 {
     font-size: 3rem;
     font-weight: 800; }
@@ -842,7 +867,8 @@ body.sidebar-open {
     .title.is-4 + .subtitle {
       font-size: 1.25rem; }
   .title.is-5 {
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    margin: 0 0 .5rem 0; }
     .title.is-5 + .subtitle {
       font-size: 1rem; }
   .title.is-6 {
@@ -856,8 +882,8 @@ body.sidebar-open {
     color: #4a4d57; }
 
 .subtitle {
-  margin-top: -8px;
-  font-weight: 300; }
+  font-weight: 300;
+  margin: 0; }
   .subtitle.is-1 {
     font-size: 64px;
     font-weight: 800; }
@@ -869,9 +895,6 @@ body.sidebar-open {
     font-size: 20px; }
   .subtitle.is-5 {
     font-size: 18px; }
-
-.subtitle {
-  margin-top: -8px; }
 
 /*!
  * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
@@ -5498,32 +5521,37 @@ readers do not read off random characters that represent icons */
   font-display: swap; }
 
 @font-face {
-  font-family: 'Spectral';
-  src: url("fonts/spectral/Spectral-LightItalic.eot");
-  src: url("fonts/spectral/Spectral-LightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/spectral/Spectral-LightItalic.woff2") format("woff2"), url("fonts/spectral/Spectral-LightItalic.woff") format("woff"), url("fonts/spectral/Spectral-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
+  font-family: 'Roboto';
+  src: url("Roboto-Regular.eot");
+  src: url("Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular.woff2") format("woff2"), url("Roboto-Regular.woff") format("woff"), url("Roboto-Regular.ttf") format("truetype"), url("Roboto-Regular.svg#Roboto-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Spectral';
-  src: url("fonts/spectral/Spectral-Light.eot");
-  src: url("fonts/spectral/Spectral-Light.eot?#iefix") format("embedded-opentype"), url("fonts/spectral/Spectral-Light.woff2") format("woff2"), url("fonts/spectral/Spectral-Light.woff") format("woff"), url("fonts/spectral/Spectral-Light.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: url("fonts/roboto/Roboto-Light.eot");
+  src: url("fonts/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("fonts/roboto/Roboto-Light.woff2") format("woff2"), url("fonts/roboto/Roboto-Light.woff") format("woff"), url("fonts/roboto/Roboto-Light.ttf") format("truetype"), url("fonts/roboto/Roboto-Light.svg#Roboto-Light") format("svg");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
-  font-family: 'Spectral';
-  src: url("fonts/spectral/Spectral-Medium.eot");
-  src: url("fonts/spectral/Spectral-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/spectral/Spectral-Medium.woff2") format("woff2"), url("fonts/spectral/Spectral-Medium.woff") format("woff"), url("fonts/spectral/Spectral-Medium.ttf") format("truetype");
-  font-weight: 500;
+  font-family: 'Roboto';
+  src: url("fonts/roboto/Roboto-Bold.eot");
+  src: url("fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("fonts/roboto/Roboto-Bold.woff") format("woff"), url("fonts/roboto/Roboto-Bold.ttf") format("truetype"), url("fonts/roboto/Roboto-Bold.svg#Roboto-Bold") format("svg");
+  font-weight: bold;
   font-style: normal;
   font-display: swap; }
 
 /*
   Helpers
 */
+.dot {
+  height: 4px;
+  width: 4px;
+  border-radius: 100%; }
+
 .is-pulled-right {
   float: right !important; }
 
@@ -5536,6 +5564,12 @@ readers do not read off random characters that represent icons */
 .width--75 {
   width: 75% !important; }
 
+.width--6r {
+  width: 6rem; }
+
+.width--1r {
+  width: 1rem; }
+
 .margin--none {
   margin: 0 !important; }
 
@@ -5545,6 +5579,9 @@ readers do not read off random characters that represent icons */
 .margin-t--40 {
   margin-top: 40px !important; }
 
+.margin-t--5r {
+  margin-top: 5rem !important; }
+
 .has-text-center {
   text-align: center; }
 
@@ -5553,6 +5590,9 @@ readers do not read off random characters that represent icons */
 
 .has-text-grey {
   color: #757d88 !important; }
+
+.has-text-black {
+  color: #00071D !important; }
 
 .has-text-green {
   color: #00C092 !important; }
@@ -5574,6 +5614,12 @@ readers do not read off random characters that represent icons */
 
 .has-text-size-5, .person-name {
   font-size: 1.25rem !important; }
+
+.has-text-size-7 {
+  font-size: 1rem !important; }
+
+.has-text-size-7 {
+  font-size: 0.85rem !important; }
 
 .has-padding-xs {
   padding: 0.5rem !important; }
@@ -5608,8 +5654,20 @@ readers do not read off random characters that represent icons */
 .is-pulled-right {
   float: right !important; }
 
+.list-unpadded {
+  padding: 0 0 0 1rem; }
+
+.has-background-white {
+  background-color: white !important; }
+
 .has-background-primary {
   background-color: #FF7A5C !important; }
+
+.has-background-grey-lighter {
+  background-color: #CAD0D9 !important; }
+
+.is-flex {
+  display: flex; }
 
 .footer {
   background: #00071D;

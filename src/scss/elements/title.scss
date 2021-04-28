@@ -3,6 +3,9 @@
   font-weight: $weight-normal;
   font-family: $family-sans-serif;
   letter-spacing: -.05rem;
+  +.subtitle{
+    margin-top: -.5rem;
+  }
 
   &.is-1 {
     font-size: $size-1;
@@ -35,6 +38,7 @@
 
   &.is-5 {
     font-size: $size-5;
+    margin: 0 0 .5rem 0;
     + .subtitle {
       font-size: $size-6;
     }
@@ -59,8 +63,8 @@
 }
 
 .subtitle {
-  margin-top:-8px;
   font-weight: 300;
+  margin: 0;
   &.is-1 {
     font-size: 64px;
     font-weight:800;
@@ -83,6 +87,4 @@
   }
 }
 
-.subtitle{
-  margin-top:-8px;
-}
+

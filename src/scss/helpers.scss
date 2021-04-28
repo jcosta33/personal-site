@@ -3,6 +3,12 @@
   Helpers
 */
 
+.dot{
+  height:4px;
+  width:4px;
+  border-radius: 100%;
+}
+
 .is-pulled-right{
   float:right!important;
 }
@@ -19,9 +25,18 @@
   width:75%!important;
 }
 
+.width--6r{
+  width:6rem;
+}
+
+.width--1r{
+  width:1rem;
+}
+
 .margin--none{
   margin:0!important;
 }
+
 .margin-b--2{
   margin-bottom:3rem!important;
 }
@@ -29,14 +44,23 @@
 .margin-t--40{
   margin-top:40px!important;
 }
+
+.margin-t--5r{
+  margin-top:5rem!important;
+}
+
 .has-text-center{
   text-align: center;
 }
+
 .has-text-uppercase{
   text-transform: uppercase!important;
 }
 .has-text-grey{
   color:$grey!important;
+}
+.has-text-black{
+  color:$black!important;
 }
 .has-text-green{
   color:$green!important;
@@ -61,6 +85,12 @@
 
 .has-text-size-5{
   font-size:$size-5!important;
+}
+.has-text-size-7{
+  font-size:$size-6!important;
+}
+.has-text-size-7{
+  font-size:$size-7!important;
 }
 
 .has-padding-xs{
@@ -105,7 +135,23 @@
   float:right!important;
 }
 
+.list-unpadded{
+  padding: 0 0 0 1rem;
+}
+
+.has-background-white {
+  background-color: $white!important;
+}
+
 .has-background-primary {
   background-color: $primary!important;
 }
 
+.has-background-grey-lighter {
+  background-color: $grey-lighter!important;
+}
+
+
+.is-flex{
+  display: flex;
+}

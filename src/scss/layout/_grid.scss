@@ -4,28 +4,32 @@
   margin: -1rem;
   &.is-multiline{
     flex-wrap: wrap;
-    .column{
-      padding: 8px;
-    }
   }
   &.is-small{
-    margin-left: -8px;
-    margin-right: -8px;
-    .column{
-      padding:8px;
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+    >.column{
+      padding:.5rem;
     }
   }
   &.is-large{
-    margin-left: -24px;
-    margin-right: -24px;
-    .column{
-      padding:24px;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    >.column{
+      padding:1.5rem;
+    }
+  }
+  &.is-xl{
+    margin-left: -3rem;
+    margin-right: -3rem;
+    >.column{
+      padding:3rem;
     }
   }
   .column{
     vertical-align: top;
     box-sizing: border-box;
-    padding: 16px;
+    padding: 1rem;
     width:100%;
     &.is-3{
       width:25%;
