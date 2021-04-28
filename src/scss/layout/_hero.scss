@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   padding: 4rem  1rem;
   margin:0;
   clear: both;
@@ -8,5 +9,13 @@
   }
   .subtitle{
     color: $grey-lightest;
+  }
+
+  .overlay{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
   }
 }

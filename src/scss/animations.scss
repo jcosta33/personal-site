@@ -1,0 +1,44 @@
+@keyframes pop {
+    0% {
+        transform: translate(0%, 0%) scale(1, 1);
+    }
+    50% {
+        transform: translate(0%, -10%) scale(1.15, 0.85);
+    }
+    55% {
+        transform: translate(0%, -20%) rotate(90deg);
+    }
+    60% {
+        transform: translate(0%, 10%) rotate(-120deg);
+    }
+    65% {
+        transform: translate(0%, -10%) rotate(15deg);
+    }
+    70% {
+        transform: translate(0%, -10%) rotate(-15deg);
+    }
+    100% {
+        transform: translate(0%, 0%) scale(1, 1);
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+        transform: rotateX(0deg) rotateY(-180deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -800px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}

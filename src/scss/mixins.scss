@@ -4,13 +4,10 @@ $control-padding-vertical-small: 8px;
 $control-padding-horizontal-small: 12px;
 $control-line-height: 14px;
 $control-line-height-small: 12px;
-$control-border-width:1px;
 
 @mixin control($is-small: false){
   position: relative;
   line-height: $control-line-height;
-  border-width:$control-border-width;
-  border-style: solid;
   border-radius: $radius;
   box-sizing: border-box;
   transition:.2s ease-in;

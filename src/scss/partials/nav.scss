@@ -1,9 +1,11 @@
 .header {
-  display: flex;
-  justify-content: space-between;
   background: $black;
   padding: 16px;
-  min-height:40px;
+  min-height: 40px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .header .logo {
@@ -13,79 +15,198 @@
   padding: 4px 0 0;
 }
 
-.header .logo img{
-  height:32px;
-  border-radius:8px;
+.header .logo img {
+  height: 32px;
+  border-radius: 8px;
 }
 
-.menu__dropdown{
-  display:none;
+.menu {
+  .menu__item {
+    display: inline-block;
+    position: relative;
+    padding: 8px;
+    > a:not(.button),
+    span {
+      text-decoration: none;
+      @media screen and (min-width: 768px) {
+        color: $grey-lighter;
+        line-height: 18px;
+      }
+      @media screen and (max-width: 768px) {
+        color: $grey-dark;
+      }
+    }
+
+    .button {
+      @media screen and (min-width: 768px) {
+        margin-left: 0.5rem;
+      }
+      @media screen and (max-width: 768px) {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 3rem;
+    padding-top: 6rem;
+    background: $white;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    z-index: 1;
+
+    .menu__item {
+      display: block;
+      color: $grey-dark;
+      a:not(.button) {
+        font-size: $size-3;
+      }
+    }
+  }
+  .menu__list .menu__item--active {
+    @extend .menu__item;
+    > a:not(.button) {
+      @media screen and (max-width: 768px) {
+        color: $black;
+        font-weight: $weight-medium;
+      }
+      @media screen and (min-width: 768px) {
+        color: $white;
+      }
+    }
+  }
+
+  .menu__item:hover {
+    .menu__dropdown {
+      display: block;
+    }
+  }
+
+  .menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu__item--expandable {
+    @extend .menu__item;
+    &:after {
+      content: "\f078";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin-left: 4px;
+      font-size: 12px;
+      line-height: 20px;
+      color: $grey-lightest;
+    }
+    &:hover:after {
+      content: "\f077";
+    }
+  }
+}
+
+input {
   position: absolute;
-  top:35px;
-  left:0;
-  padding:8px;
-  background:$white;
-  border-radius:$radius;
-  width:120px;
-}
+  right: 0;
+  top: 0;
+  height: 4rem;
+  width: 4rem;
+  opacity: 0;
+  z-index: 3;
+  ~ span {
+    z-index: 2;
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      opacity 0.55s ease;
+    margin-left: auto;
 
-.dropdown__item{
-  display:block;
-  a{
-    display:block;
-    color:$text;
-    padding:16px 12px;
-    text-decoration: none;
+    @media screen and (min-width: 768px) {
+      display:none;
+    }
+    &:first-child {
+      transform-origin: 0% 0%;
+    }
+
+    &:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+  }
+
+  &:checked {
+    ~ span {
+      background: $black;
+      transform: rotate(45deg) translate(-2px, -1px);
+      opacity: 1;
+    }
+
+    /* 
+     * Transform all the slices of hamburger
+     * into a crossmark.
+     */
+
+    /*
+     * But let's hide the middle one.
+     */
+    ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+     * Ohyeah and the last one should go the other direction
+     */
+    ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    &:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+
+    ~ .menu {
+      transform: translate(0, 0);
+    }
   }
 }
-
-.menu__item:hover {
-  .menu__dropdown{
-    display:block;
-  }
-}
-
-.menu__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu__item {
-  display: inline-block;
-  position:relative;
+.menu__dropdown {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
   padding: 8px;
-  > a:not(.button), span {
+  background: $white;
+  border-radius: $radius;
+  width: 120px;
+}
+
+.dropdown__item {
+  display: block;
+  a {
+    display: block;
+    color: $text;
+    padding: 16px 12px;
     text-decoration: none;
-    color: $grey-lighter;
-    line-height: 18px;
   }
 }
 
-.menu__item--expandable{
-  @extend .menu__item;
-  &:after{
-    content: "\f078";
-    font-family: "Font Awesome 5 Free"; 
-    font-weight: 900;
-    margin-left: 4px;
-    font-size: 12px;
-    line-height: 20px;
-    color:$grey-lightest;
-  }
-  &:hover:after{
-    content: "\f077";
-  }
-}
-
-.menu__item--active{
-  @extend .menu__item;
-
-  color:$white;
-}
-
-.person-name{
+.person-name {
   @extend .has-h-padding-xs;
   @extend .has-text-white;
   @extend .has-text-size-5;
+  @media screen and (max-width: 768px) {
+    float: left;
+  }
 }

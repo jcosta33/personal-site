@@ -1,26 +1,42 @@
-.tags{
-  display:flex;
+.tags {
+  display: flex;
 }
 
-.tag{
-  padding:8px;
-  border-radius:8px;
-  height:35px;
-  font-weight:600;
-  &.is-primary{
+.tag {
+  padding: 0.5rem;
+  &:not(.is-separator) {
+    border-radius: 8px;
+  }
+  height: 35px;
+  font-weight: 600;
+  &.is-primary {
     background-color: $primary;
-    color:#fff;
+    color: #fff;
   }
-  &.is-aqualight{
+  &.is-aqualight {
     color: $success;
-    background:#C9F7F4;
+    background: #c9f7f4;
   }
-  &.is-yellow{
+  &.is-yellow {
     background-color: $warning;
-    color:#000;
+    color: #000;
   }
   &.is-black {
     background-color: $black;
     color: $white;
+  }
+  &.is-separator {
+    padding-right: 1.5rem;
+    overflow: hidden;
+    &:after {
+      content: " ";
+      height: 25px;
+      width: 25px;
+      position: absolute;
+      right:  -15px;
+      top: 50%;
+      transform: translateY(-51%) rotate(45deg);
+      background-color: $grey-lighter;
+    }
   }
 }

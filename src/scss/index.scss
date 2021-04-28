@@ -1,5 +1,6 @@
 @import 'variables.scss';
 @import 'mixins.scss';
+@import 'animations.scss';
 
 @import 'normalize.scss';
 @import 'base.scss';
@@ -17,6 +18,7 @@
 @import 'layout/section.scss';
 
 @import 'elements/container.scss';
+@import 'elements/cloud.scss';
 @import 'elements/icon.scss';
 @import 'elements/image.scss';
 @import 'elements/link.scss';
