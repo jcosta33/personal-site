@@ -379,7 +379,7 @@ template {
 
 body {
   margin: 0;
-  background: #f1f1f1;
+  background: #F5F7FA;
   font-family: "Roboto", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system;
   font-size: 16px;
   display: flex;
@@ -799,7 +799,7 @@ body.sidebar-open {
 
 .hero {
   position: relative;
-  padding: 4rem  1rem;
+  padding: 4rem 1rem;
   margin: 0;
   clear: both;
   background: #00071D; }
@@ -5672,6 +5672,9 @@ readers do not read off random characters that represent icons */
 /*
   Helpers
 */
+/*
+  Bulma approach
+*/
 .dot {
   height: 4px;
   width: 4px;
@@ -5682,30 +5685,6 @@ readers do not read off random characters that represent icons */
 
 .is-pulled-left {
   float: left !important; }
-
-.max_width--25r {
-  width: 25rem !important; }
-
-.width--75 {
-  width: 75% !important; }
-
-.width--6r {
-  width: 6rem; }
-
-.width--1r {
-  width: 1rem; }
-
-.margin--none {
-  margin: 0 !important; }
-
-.margin-b--2 {
-  margin-bottom: 3rem !important; }
-
-.margin-t--40 {
-  margin-top: 40px !important; }
-
-.margin-t--5r {
-  margin-top: 5rem !important; }
 
 .has-text-center {
   text-align: center !important; }
@@ -5769,19 +5748,6 @@ readers do not read off random characters that represent icons */
 .has-h-m-xs {
   margin: 0 0.5rem !important; }
 
-.background--red {
-  background: #F4253B !important; }
-  .background--red h1,
-  .background--red h2,
-  .background--red h3,
-  .background--red h4,
-  .background--red h5,
-  .background--red h6,
-  .background--red p {
-    color: white; }
-  .background--red p {
-    opacity: 0.6; }
-
 .is-pulled-right {
   float: right !important; }
 
@@ -5805,6 +5771,44 @@ readers do not read off random characters that represent icons */
 
 .is-flipping {
   animation: flip 2s ease-in infinite; }
+
+/* BEM approach */
+.maxwidth--25r {
+  width: 25rem !important; }
+
+.width--75p {
+  width: 75% !important; }
+
+.width--6r {
+  width: 6rem; }
+
+.width--1r {
+  width: 1rem; }
+
+.margin--none {
+  margin: 0 !important; }
+
+.margin-b--2 {
+  margin-bottom: 3rem !important; }
+
+.margin-t--40 {
+  margin-top: 40px !important; }
+
+.margin-t--5r {
+  margin-top: 5rem !important; }
+
+.background--red {
+  background: #F4253B !important; }
+  .background--red h1,
+  .background--red h2,
+  .background--red h3,
+  .background--red h4,
+  .background--red h5,
+  .background--red h6,
+  .background--red p {
+    color: white; }
+  .background--red p {
+    opacity: 0.6; }
 
 .footer {
   background: #00071D;
@@ -5863,6 +5867,7 @@ readers do not read off random characters that represent icons */
   height: 32px;
   border-radius: 8px; }
 
+/* BEM approach */
 .menu .menu__item, .menu .vertical-nav .menu__item--active, .vertical-nav .menu .menu__item--active, .menu .menu__list .menu__item--active, .menu .menu__item--expandable {
   display: inline-block;
   position: relative;
@@ -6017,6 +6022,7 @@ input {
     padding: 16px 12px;
     text-decoration: none; }
 
+/* Bulma approach */
 @media screen and (max-width: 768px) {
   .person-name {
     float: left; } }

@@ -1,8 +1,8 @@
-$body-bg: $grey-light;
+$body-bg: $white-ter;
 
 body {
   margin: 0;
-  background: #f1f1f1;
+  background: $body-bg;
   font-family: $family-sans;
   font-size:16px;
   display: flex;

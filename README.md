@@ -2,6 +2,12 @@
 
 Site built with HTML templating using Nunjucks. Including a gulp-sass-workflow, linting and prettier.
 
+## Technologies
+
+1. HTML5
+2. SASS
+3. Nunjucks
+
 ## Basic Setup
 
 1.  Clone / Download
@@ -21,7 +27,7 @@ $ gulp
 ## Gulp tasks
 
 ```
-$ gulp watch (default task)
+$ gulp watch
 ```
 
 Watches for changes to scss, js and nunjucks (njk) files. Compiles on save.
@@ -31,6 +37,18 @@ $ gulp styles
 ```
 
 Compiles sass to css.
+
+```
+$ gulp move-fonts & move-images
+```
+
+Moves fonts and images to dist folder
+
+```
+$ gulp compress-images
+```
+
+Compresses images
 
 ```
 $ gulp lint

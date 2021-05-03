@@ -2,6 +2,10 @@
   Helpers
 */
 
+/*
+  Bulma approach
+*/
+
 .dot {
   height: 4px;
   width: 4px;
@@ -14,38 +18,6 @@
 
 .is-pulled-left {
   float: left !important;
-}
-
-.max_width--25r {
-  width: 25rem !important;
-}
-
-.width--75 {
-  width: 75% !important;
-}
-
-.width--6r {
-  width: 6rem;
-}
-
-.width--1r {
-  width: 1rem;
-}
-
-.margin--none {
-  margin: 0 !important;
-}
-
-.margin-b--2 {
-  margin-bottom: 3rem !important;
-}
-
-.margin-t--40 {
-  margin-top: 40px !important;
-}
-
-.margin-t--5r {
-  margin-top: 5rem !important;
 }
 
 .has-text-center {
@@ -70,9 +42,11 @@
 .has-text-uppercase {
   text-transform: uppercase !important;
 }
+
 .has-text-grey {
   color: $grey !important;
 }
+
 .has-text-black {
   color: $black !important;
 }
@@ -87,12 +61,15 @@
 .has-text-size-1 {
   font-size: $size-1 !important;
 }
+
 .has-text-size-2 {
   font-size: $size-2 !important;
 }
+
 .has-text-size-3 {
   font-size: $size-3 !important;
 }
+
 .has-text-size-4 {
   font-size: $size-4 !important;
 }
@@ -100,9 +77,11 @@
 .has-text-size-5 {
   font-size: $size-5 !important;
 }
+
 .has-text-size-7 {
   font-size: $size-6 !important;
 }
+
 .has-text-size-7 {
   font-size: $size-7 !important;
 }
@@ -127,22 +106,6 @@
 
 .has-h-m-xs {
   margin: 0 $block-spacing-xs !important;
-}
-
-.background--red {
-  background: $danger !important;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    color: $white;
-  }
-  p {
-    opacity: 0.6;
-  }
 }
 
 .is-pulled-right {
@@ -175,4 +138,56 @@
 
 .is-flipping {
   animation: flip 2s ease-in infinite;
+}
+
+
+/* BEM approach */
+
+
+.maxwidth--25r {
+  width: 25rem !important;
+}
+
+.width--75p {
+  width: 75% !important;
+}
+
+.width--6r {
+  width: 6rem;
+}
+
+.width--1r {
+  width: 1rem;
+}
+
+.margin--none {
+  margin: 0 !important;
+}
+
+.margin-b--2 {
+  margin-bottom: 3rem !important;
+}
+
+.margin-t--40 {
+  margin-top: 40px !important;
+}
+
+.margin-t--5r {
+  margin-top: 5rem !important;
+}
+
+.background--red {
+  background: $danger !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: $white;
+  }
+  p {
+    opacity: 0.6;
+  }
 }

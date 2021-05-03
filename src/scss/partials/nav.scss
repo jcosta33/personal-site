@@ -20,6 +20,8 @@
   border-radius: 8px;
 }
 
+/* BEM approach */
+
 .menu {
   .menu__item {
     display: inline-block;
@@ -69,6 +71,7 @@
       }
     }
   }
+
   .menu__list .menu__item--active {
     @extend .menu__item;
     > a:not(.button) {
@@ -134,7 +137,7 @@ input {
     margin-left: auto;
 
     @media screen and (min-width: 768px) {
-      display:none;
+      display: none;
     }
     &:first-child {
       transform-origin: 0% 0%;
@@ -181,6 +184,7 @@ input {
     }
   }
 }
+
 .menu__dropdown {
   display: none;
   position: absolute;
@@ -201,6 +205,8 @@ input {
     text-decoration: none;
   }
 }
+
+/* Bulma approach */
 
 .person-name {
   @extend .has-h-padding-xs;
