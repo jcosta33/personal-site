@@ -34,7 +34,7 @@
 
 .has-image-right {
   @extend .has-text-right;
-  img{
+  img {
     @extend .is-inline-block;
   }
 }
@@ -141,9 +141,7 @@
   animation: flip 2s ease-in infinite;
 }
 
-
 /* BEM approach */
-
 
 .maxwidth--25r {
   width: 25rem !important;
@@ -165,7 +163,10 @@
   margin: 0 !important;
 }
 
-.margin-b--2 {
+.margin-t--05 {
+  margin-top: .5rem !important;
+}
+.margin-b--3 {
   margin-bottom: 3rem !important;
 }
 
@@ -192,4 +193,8 @@
   p {
     opacity: 0.6;
   }
+}
+
+.has-radius {
+  border-radius: $radius;
 }

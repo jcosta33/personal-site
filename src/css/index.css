@@ -5788,7 +5788,10 @@ readers do not read off random characters that represent icons */
 .margin--none {
   margin: 0 !important; }
 
-.margin-b--2 {
+.margin-t--05 {
+  margin-top: .5rem !important; }
+
+.margin-b--3 {
   margin-bottom: 3rem !important; }
 
 .margin-t--40 {
@@ -5809,6 +5812,9 @@ readers do not read off random characters that represent icons */
     color: white; }
   .background--red p {
     opacity: 0.6; }
+
+.has-radius {
+  border-radius: 8px; }
 
 .footer {
   background: #00071d;
