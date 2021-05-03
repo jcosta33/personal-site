@@ -1,16 +1,17 @@
-$background:$white;
-$padding:32px;
+$background: $white;
+$padding: 32px;
 
 .card{
+  background: $background;
+  border-radius: $radius;
+  display: block;
   position: relative;
-  display:block;
-  background:$background;
-  border-radius:$radius;
   &:not(:last-child){
-    margin-bottom:30px;
+    margin-bottom: 30px;
   }
+
   .card-content{
-    padding:$padding;
     box-sizing: border-box;
+    padding: $padding;
   }
 }

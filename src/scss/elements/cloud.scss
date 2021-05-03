@@ -1,9 +1,9 @@
 .cloud {
-    -webkit-border-radius: 3rem;
     -moz-border-radius: 3rem;
-    border-radius: 3rem;
-    -webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 3rem;
+    -webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 3rem;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
     height: 120px;
     position: relative;
@@ -12,18 +12,22 @@
         animation: animateCloud 35s linear infinite;
         transform: scale(0.65);
     }
+
     &.x2 {
         animation: animateCloud 20s linear infinite;
         transform: scale(0.3);
     }
+
     &.x3 {
         animation: animateCloud 30s linear infinite;
         transform: scale(0.5);
     }
+
     &.x4 {
         animation: animateCloud 18s linear infinite;
         transform: scale(0.4);
     }
+
     &.x5 {
         animation: animateCloud 25s linear infinite;
         transform: scale(0.55);
@@ -42,21 +46,25 @@
 .cloud.x1:before {
     background: #0a337f;
 }
+
 .cloud.x2,
 .cloud.x2:after,
 .cloud.x2:before {
     background: #1258dc;
 }
+
 .cloud.x3,
 .cloud.x3:after,
 .cloud.x3:before {
     background: #6395f2;
 }
+
 .cloud.x4,
 .cloud.x4:after,
 .cloud.x4:before {
     background: #abc7f7;
 }
+
 .cloud.x5,
 .cloud.x5:after,
 .cloud.x5:before {
@@ -70,10 +78,11 @@
     top: -1rem;
     width: 2rem;
 }
+
 .cloud:before {
     border-radius: 6rem;
-    width: 2.75rem;
     height: 2.75rem;
     right: 1rem;
     top: -1.5rem;
+    width: 2.75rem;
 }

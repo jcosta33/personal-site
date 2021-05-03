@@ -1,69 +1,69 @@
 // Colors
 
-$black: #00071D !default;
-$black-bis: #0B1033 !default;
-$black-ter: #05263B !default;
+$black: #00071d !default;
+$black-bis: #0b1033 !default;
+$black-ter: #05263b !default;
 
-$grey-darker: #3E5460 !default;
+$grey-darker: #3e5460 !default;
 $grey-dark: #575e67 !default;
 $grey: #757d88 !default;
-$grey-light: #ADA9BB !default;
-$grey-lighter: #CAD0D9 !default;
-$grey-lightest: #E5E8ED !default;
+$grey-light: #ada9bb !default;
+$grey-lighter: #cad0d9 !default;
+$grey-lightest: #e5e8ed !default;
 
 $white: hsl(0, 0%, 100%) !default;
 $white-bis: #fafcfd !default;
-$white-ter: #F5F7FA !default;
+$white-ter: #f5f7fa !default;
 
-$orange: #FF7A5C !default;
-$yellow: #FBBB24 !default;
-$yellow-lighter: #FFE400 !default;
-$green: #00C092 !default;
-$turquoise: #60FBD5 !default;
-$aqua: #00AFB9 !default;
+$orange: #ff7a5c !default;
+$yellow: #fbbb24 !default;
+$yellow-lighter: #ffe400 !default;
+$green: #00c092 !default;
+$turquoise: #60fbd5 !default;
+$aqua: #00afb9 !default;
 $blue: #3297c2 !default;
-$blue-dark:#0975C7!default;
-$blue-darker:#002F83!default;
-$blue-darkest:#030E5E!default;
-$purple: #7854F7 !default;
-$red: #F4253B !default;
-$magenta:#CC088A!default;
-$fuchsia:#FF3781!default;
-$navi:#003A6B!default;
-$midnight:#0C6980!default;
-$beetle:#AFCCCF!default;
-$serenity:#C4DBE0!default;
-$plum:#938BB7!default;
-$clot:#970C10!default;
-$crimson:#710117!default;
-$coral:#CF6856!default;
-$mimosa:#FFD780!default;
-$beige:#E8D5B5!default;
-$aqualight:#E2F1F2!default;
-$ivory:#EDF1E9!default;
-$cream:#FFFADE!default;
-$alice:#FBF7FF!default;
-$quartz:#F6E2E3!default;
-$soft:#F5F7FE!default;
+$blue-dark: #0975c7 !default;
+$blue-darker: #002f83 !default;
+$blue-darkest: #030e5e !default;
+$purple: #7854f7 !default;
+$red: #f4253b !default;
+$magenta: #cc088a !default;
+$fuchsia: #ff3781 !default;
+$navi: #003a6b !default;
+$midnight: #0c6980 !default;
+$beetle: #afcccf !default;
+$serenity: #c4dbe0 !default;
+$plum: #938bb7 !default;
+$clot: #970c10 !default;
+$crimson: #710117 !default;
+$coral: #cf6856 !default;
+$mimosa: #ffd780 !default;
+$beige: #e8d5b5 !default;
+$aqualight: #e2f1f2 !default;
+$ivory: #edf1e9 !default;
+$cream: #fffade !default;
+$alice: #fbf7ff !default;
+$quartz: #f6e2e3 !default;
+$soft: #f5f7fe !default;
 
-$primary:$orange;
-$success:$green;
-$danger:$red;
-$warning:$yellow;
+$primary: $orange;
+$success: $green;
+$danger: $red;
+$warning: $yellow;
 $info: $blue;
 $dark: $grey-darker;
 
-$linkedin:#0e76a8;
-$facebook:#4267B2;
-$instagram:#8a3ab9;
-$twitter:#1DA1F2;
+$linkedin: #0e76a8;
+$facebook: #4267b2;
+$instagram: #8a3ab9;
+$twitter: #1da1f2;
 
 $text: $dark;
 
 // Typography
 
-$family-sans-serif:  "Karla", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system, !default;
-$family-sans:  "Roboto", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system, !default;
+$family-sans-serif:  'Karla', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif, BlinkMacSystemFont, -apple-system, !default;
+$family-sans:  'Roboto', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif, BlinkMacSystemFont, -apple-system, !default;
 $family-monospace: monospace !default;
 $render-mode: optimizeLegibility !default;
 

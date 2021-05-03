@@ -1,23 +1,20 @@
 .header {
   background: $black;
-  padding: 16px;
   min-height: 40px;
+  padding: 16px;
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
   }
-}
-
-.header .logo {
-  float: left;
-  padding: 8px;
-  margin: 0;
-  padding: 4px 0 0;
-}
-
-.header .logo img {
-  height: 32px;
-  border-radius: 8px;
+  .logo {
+    float: left;
+    margin: 0;
+    padding: 4px 8px 8px;
+    img {
+      height: 32px;
+      border-radius: 8px;
+    }
+  }
 }
 
 /* BEM approach */
@@ -34,6 +31,7 @@
         color: $grey-lighter;
         line-height: 18px;
       }
+
       @media screen and (max-width: 768px) {
         color: $grey-dark;
       }
@@ -43,6 +41,7 @@
       @media screen and (min-width: 768px) {
         margin-left: 0.5rem;
       }
+
       @media screen and (max-width: 768px) {
         margin-top: 3rem;
       }
@@ -79,6 +78,7 @@
         color: $black;
         font-weight: $weight-medium;
       }
+
       @media screen and (min-width: 768px) {
         color: $white;
       }
@@ -108,6 +108,7 @@
       line-height: 20px;
       color: $grey-lightest;
     }
+
     &:hover:after {
       content: "\f077";
     }
@@ -129,9 +130,9 @@ input {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: #cdcdcd;
+    background: $grey-light;
     border-radius: 3px;
-    transform-origin: 4px 0px;
+    transform-origin: 4px 0;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
       opacity 0.55s ease;
     margin-left: auto;
@@ -139,6 +140,7 @@ input {
     @media screen and (min-width: 768px) {
       display: none;
     }
+
     &:first-child {
       transform-origin: 0% 0%;
     }

@@ -1,31 +1,31 @@
 .table{
-  background:$white-ter;
+  background: $white-ter;
 }
 
 .table thead{
-  background:$grey-lightest;
+  background: $grey-lightest;
 }
 
 .table th{
-  padding:16px;
+  padding: 16px;
 }
 
 .table thead th{
-  border-bottom:1px solid $grey-light;
+  border-bottom: 1px solid $grey-light;
 }
 
 .table tbody tr th{
-  border-bottom:1px solid $grey-light;
+  border-bottom: 1px solid $grey-light;
 }
 
 .table tbody tr td{
-  border-bottom:1px solid $grey-light;
+  border-bottom: 1px solid $grey-light;
 }
 
 .table th > i{
-  float:right;
+  float: right;
 }
 
 .table td{
-  padding:24px;
+  padding: 24px;
 }

@@ -1,86 +1,93 @@
 .sidebar{
   .logo{
-    height:44px;
-    width:44px;
-    margin:8px;
-    padding:2px;
     background-color: $grey-darker;
-    border-radius:4px;
+    border-radius: 4px;
+    height: 44px;
+    margin: 8px;
+    padding: 2px;
+    width: 44px;
   }
+
   .menu__item  .fa-chevron-up{
-    display:none;
+    display: none;
   }
+
    .menu__item  .fa-chevron-down{
-    display:inline-block;
+    display: inline-block;
   }
   
    .menu__item:hover .fa-chevron-up{
-    display:inline-block;
+    display: inline-block;
   }
   
    .menu__item:hover .fa-chevron-down{
-    display:none;
+    display: none;
   }
   
    .menu__item:hover .dropdown{
-    display:block;
+    display: block;
   }
+
   .menu__item{
-    display:block;
+    display: block;
   }
+
    .menu__item a{
-    display:block;
-    padding:12px 0;
+    color: $grey-darker;
+    display: block;
+    padding: 12px 0;
     text-decoration: none;
-    color:$grey-darker;
   }
+
    .menu__item a:hover{
-    color:$primary
+    color: $primary
   }
   
    .dropdown{
-    padding:0 8px 8px;
+    padding: 0 8px 8px;
   }
   
    .dropdown{
-    display:none;
+    display: none;
   }
 } 
 
 .vertical-nav{
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 60px;
   background: $black-ter;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 60px;
   .menu__item {
-    display:block;
+    display: block;
     a {
-      display:block;
-      padding:5px;
-      color:$grey-lightest;
-      width:calc(100% - 4px);
+      border-left: 4px solid transparent;
+      color: $grey-lightest;
+      color: $white;
+      display: block;
+      padding: 5px;
+      padding: 16px 0;
       text-align: center;
-      padding:16px 0;
-      border-left:4px solid transparent;
-      color:$white;
+      width: calc(100% - 4px);
     }
   }
+
   .menu__item--active{
     @extend .menu__item;
     a{
-      color:$primary;
-      border-color:$primary;
+      border-color: $primary;
+      color: $primary;
     }
   }
+
   .vertical-nav__user{
+    bottom: 16px;
+    height: 60px;
+    left: 0;
+    padding: 12px;
     position: absolute;
-    bottom:16px;
-    left:0;
-    height:60px;
-    width:60px;
-    padding:12px;
+    width: 60px;
     img {
       border-radius: 100%;
     }
@@ -91,5 +98,5 @@
   
 
 body.sidebar-open{
-  padding-left:60px;
+  padding-left: 60px;
 }

@@ -12,9 +12,11 @@
       flex-direction: column-reverse;
     }
   }
+
   &.is-multiline {
     flex-wrap: wrap;
   }
+
   &.is-small {
     margin-left: -0.5rem;
     margin-right: -0.5rem;
@@ -22,6 +24,7 @@
       padding: 0.5rem;
     }
   }
+
   &.is-large {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
@@ -29,6 +32,7 @@
       padding: 1.5rem;
     }
   }
+
   &.is-xl {
     margin-left: -3rem;
     margin-right: -3rem;
@@ -36,30 +40,37 @@
       padding: 3rem;
     }
   }
+
   .column {
-    vertical-align: top;
     box-sizing: border-box;
     padding: 1rem;
+    vertical-align: top;
     width: 100%;
     @media screen and (min-width: 768px) {
       &.is-3 {
         width: 25%;
       }
+
       &.is-4 {
         width: 33.3333333%;
       }
+
       &.is-5 {
         width: 41.6666666667%;
       }
+
       &.is-6 {
         width: 50%;
       }
+
       &.is-7 {
         width: 58.3333333333%;
       }
+
       &.is-8 {
         width: 66.6666666667%;
       }
+
       &.is-12 {
         width: 100%;
       }

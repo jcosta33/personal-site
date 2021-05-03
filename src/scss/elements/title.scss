@@ -1,8 +1,8 @@
 .title {
-  margin: 0 0 16px;
-  font-weight: $weight-normal;
   font-family: $family-sans-serif;
+  font-weight: $weight-normal;
   letter-spacing: -0.05rem;
+  margin: 0 0 16px;
   + .subtitle {
     margin-top: -0.5rem;
   }
@@ -56,15 +56,17 @@
   }
 
   ~ .subtitle {
-    margin-top: -16px;
     color: #4a4d57;
+    margin-top: -16px;
   }
+
   @media screen and (max-width: 768px) {
     &.is-2-mobile {
       font-size: $size-2;
     }
   }
 }
+
 .subtitle {
   font-weight: 300;
   margin: 0;

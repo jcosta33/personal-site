@@ -1,23 +1,26 @@
-$input-bg:$white-ter;
+$input-bg: $white-ter;
 
 .field{
   &:not(:last-child){
-    margin-bottom:32px;
+    margin-bottom: 32px;
   }
+
   &:hover .icon{
-    color:$black;
+    color: $black;
     display: block;
   }
+
   input,
   textarea,
   select{
     box-sizing: border-box;
   }
+
   .icon{
-    position: absolute;
+    color: $grey;
     line-height: 42px;
     padding: 0 10px;
-    color:$grey;
+    position: absolute;
      ~  .input{
       padding-left: 32px;
     }
@@ -25,28 +28,29 @@ $input-bg:$white-ter;
 }
 
 .forms-page .title.is-2{
-  margin-top:32px;
+  margin-top: 32px;
 }
 
 .form{
-  margin-top:32px;
+  margin-top: 32px;
   label{
-    display:block;
-    margin-bottom:8px;
+    display: block;
+    margin-bottom: 8px;
   }
 }
 
 .input, .select{
-  background:$input-bg;
+  background: $input-bg;
+  border-color: $grey-lighter;
   min-width: 100px;
-  width:100%;
-  border-color:$grey-lighter;
+  width: 100%;
   
   &:hover{
-    border:1px solid $grey-dark;
+    border: 1px solid $grey-dark;
   }
+
   &:focus{
-    border:1px solid $primary;
+    border: 1px solid $primary;
   }
 
   &:not(.is-small){
@@ -56,33 +60,36 @@ $input-bg:$white-ter;
   &.is-small{
     @extend %control-small;
   }
+
   ~ .message{
-    margin-top:6px;
-    font-size:12px;
-    color:$grey;
+    color: $grey;
+    font-size: 12px;
+    margin-top: 6px;
     &.is-danger{
-      color:$danger;
+      color: $danger;
     }
+
     &.is-info{
-      color:$primary;
+      color: $primary;
     }
   }
 }
 
 
 .textarea{
-  min-width: 200px;
-  min-height: 80px;
-  padding:8px;
-  background:none;
-  border:1px solid $grey-dark;
+  background: none;
+  border: 1px solid $grey-dark;
   border-radius: 8px;
-  outline:0!important;
+  min-height: 80px;
+  min-width: 200px;
+  outline: 0 !important;
+  padding: 8px;
   &:hover{
-    border:1px solid $black;
+    border: 1px solid $black;
   }
+
   &:focus{
-    border:1px solid $primary;
+    border: 1px solid $primary;
   }
 }
 
@@ -91,12 +98,12 @@ $input-bg:$white-ter;
 }
 
 .control{
-  display:inline-block;
+  display: inline-block;
   label{
-    display:inline-block;
+    display: inline-block;
   }
   
  input{
-    display:inline-block;
+    display: inline-block;
   }
 }

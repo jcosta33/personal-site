@@ -1,41 +1,45 @@
 .icon {
-  display:inline-block;
-  padding: 8px;
   border-radius: 8px;
+  display: inline-block;
+  padding: 8px;
   i{
-    display:block;
+    display: block;
   }
+
   &.is-hoverable{
     cursor: pointer;
-    transition:.2s ease;
+    transition: .2s ease;
   }
+
   &.is-green {
+    background: $aqualight;
     color: $green;
-    background:$aqualight;
     &.is-hoverable{
       &:hover{
         background: $green;
-        color:$aqualight;
+        color: $aqualight;
       }
     }
   }
+
   &.is-red {
+    background: $quartz;
     color: $red;
-    background:$quartz;
     &.is-hoverable{
       &:hover{
         background: $red;
-        color:$quartz;
+        color: $quartz;
       }
     }
   }
+
   &.is-blue {
+    background: $ivory;
     color: $blue;
-    background:$ivory;
     &.is-hoverable{
       &:hover{
         background: $blue;
-        color:$ivory;
+        color: $ivory;
       }
     }
   }

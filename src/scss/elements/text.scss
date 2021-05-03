@@ -1,17 +1,18 @@
 .lead{
-  font-size:18px;
-  margin-bottom:1rem;
-  margin-top:0;
+  font-size: 18px;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .text{
-  color:$text;
-  margin-bottom:1rem;
-  margin-top:0;
+  color: $text;
+  margin-bottom: 1rem;
+  margin-top: 0;
 
   &.is-primary{
     color: $primary;
   }
+
   &.is-grey {
     color: $grey;
   }
@@ -19,13 +20,15 @@
   &.is-dark {
     color: $dark;
   }
+
   &.is-black {
     color: $black;
   }
   
   &.is-success{
-    color:$success;
+    color: $success;
   }
+
   &.is-uppercase{
     text-transform: uppercase;
   }

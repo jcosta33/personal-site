@@ -7,9 +7,9 @@
 */
 
 .dot {
+  border-radius: 100%;
   height: 4px;
   width: 4px;
-  border-radius: 100%;
 }
 
 .is-pulled-right {
@@ -50,6 +50,7 @@
 .has-text-black {
   color: $black !important;
 }
+
 .has-text-green {
   color: $green !important;
 }
@@ -100,8 +101,8 @@
 }
 
 .has-v-padding-sm {
-  padding-top: $block-spacing-sm !important;
   padding-bottom: $block-spacing-sm !important;
+  padding-top: $block-spacing-sm !important;
 }
 
 .has-h-m-xs {
@@ -187,6 +188,7 @@
   p {
     color: $white;
   }
+
   p {
     opacity: 0.6;
   }

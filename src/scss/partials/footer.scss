@@ -1,11 +1,12 @@
 .footer {
   background: $black;
-  padding: 32px;
   flex-shrink: 0;
+  padding: 32px;
 
   .title {
     color: $white;
   }
+
   p,
   label,
   a,
@@ -16,39 +17,43 @@
   .social-list {
     display: flex;
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+
     li {
-      padding: 0;
       margin: 0;
+      padding: 0;
+    }
+    .icon {
+      color: $white;
+      padding: 16px;
 
-      .icon {
-        padding: 16px;
-        color: $white;
+      &__linkedin {
+        background: $linkedin;
+      }
 
-        &__linkedin {
-          background: $linkedin;
-        }
-        &__facebook {
-          background: $facebook;
-        }
-        &__instagram {
-          background: $instagram;
-        }
-        &__twitter {
-          background: $twitter;
-        }
+      &__facebook {
+        background: $facebook;
+      }
+
+      &__instagram {
+        background: $instagram;
+      }
+
+      &__twitter {
+        background: $twitter;
       }
     }
   }
-}
 
-.logo {
-  img {
-    height: 32px;
-    border-radius: 8px;
-  }
-  span {
-    vertical-align: top;
+  .logo {
+    img {
+      border-radius: 8px;
+      height: 32px;
+    }
+
+    span {
+      vertical-align: top;
+    }
   }
 }

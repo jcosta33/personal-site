@@ -9,14 +9,15 @@ $button-text-color: $white;
   &.is-aligned-right {
     justify-content: flex-end;
   }
+
   &.is-spaced-between {
     justify-content: space-between;
   }
 }
 
 .button {
-  display: inline-block;
-  border: none;
+  background-color: $grey-darker;
+  border: 0;
   &:not(.is-small) {
     @extend %control;
   }
@@ -26,7 +27,7 @@ $button-text-color: $white;
   }
 
   color: $button-text-color;
-  background-color: $grey-darker;
+  display: inline-block;
   text-decoration: none;
 
   &:not(:last-child) {
@@ -49,8 +50,8 @@ $button-text-color: $white;
     background-color: $white;
     color: #333;
     &:hover {
-      cursor: pointer;
       background: darken($white, 10%);
+      cursor: pointer;
     }
   }
 
@@ -61,8 +62,8 @@ $button-text-color: $white;
   &.is-primary {
     background-color: $primary;
     &:hover {
-      cursor: pointer;
       background: darken($primary, 10%);
+      cursor: pointer;
     }
   }
 
@@ -73,16 +74,17 @@ $button-text-color: $white;
   &.is-success {
     background-color: $success;
     &:hover {
-      cursor: pointer;
       background: darken($success, 10%);
+      cursor: pointer;
     }
   }
+
   &.is-light {
     background-color: $aqualight;
     color: $dark;
     &:hover {
-      cursor: pointer;
       background: darken($aqualight, 10%);
+      cursor: pointer;
     }
   }
 
@@ -90,9 +92,9 @@ $button-text-color: $white;
     background-color: $aqualight;
     color: $success;
     &:hover {
-      cursor: pointer;
       background-color: $success;
       color: $white;
+      cursor: pointer;
     }
   }
 
@@ -101,16 +103,16 @@ $button-text-color: $white;
     border-color: darken($info, 10%);
 
     &:hover {
-      cursor: pointer;
       background: darken($info, 10%);
+      cursor: pointer;
     }
   }
 
   &.is-danger {
     background-color: $danger;
     &:hover {
-      cursor: pointer;
       background: darken($danger, 10%);
+      cursor: pointer;
     }
   }
 
@@ -121,8 +123,8 @@ $button-text-color: $white;
   &.is-warning {
     background-color: $warning;
     &:hover {
-      cursor: pointer;
       background: darken($warning, 10%);
+      cursor: pointer;
     }
   }
 }
